@@ -2,7 +2,7 @@
 var mysql = require ('mysql');
 
 var connection = mysql.createConnection({
-  port: 3000,
+  port: 3306, //3306 is always MySQL!!!!!
   host: "localhost",
   user: "root",
   password: "",
@@ -18,3 +18,4 @@ connection.connect(function(err){
 });
 
 module.exports = connection;
+//export connection for the orm to use

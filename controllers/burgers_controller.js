@@ -5,7 +5,7 @@ var burger = require ("../models/burger.js");
 var router = express.Router();
 
   router.get("/", function(req, res){
-    cat.all(function(data){
+    burger.all(function(data){
       var hbsObject = {
         burgers: data
       };
