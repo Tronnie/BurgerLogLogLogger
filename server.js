@@ -24,7 +24,3 @@ var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
 
 app.listen(port);
-
-//Basic server connection
-
-//Database connection

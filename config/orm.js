@@ -1,4 +1,4 @@
-//Create methods that will execute MySQL commands in the controllers.
+// MySQL codes are here.
 
 var connection = require ("../config/connection.js");
 

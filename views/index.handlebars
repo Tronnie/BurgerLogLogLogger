@@ -17,7 +17,12 @@
     <label for="eaten">Devoured?</label><br>
     <input type="radio" name="devoured" value="1" checked> No longer available!<br>
     <input type="radio" name="not devoured" value="0"> Available!!
-  </div> -->
+  </div>
+
+  <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+    {{#if devoured}}DEVOURED!{{else}}DEVOUR IT!{{/if}}
+  </button>
+-->
 
 <h2>Burgers To Devour...</h2>
 
@@ -30,6 +35,7 @@
 </ul>
 
 <h2>Burgers Devoured:</h2>
+
 
 <br />
 <footer>Burger Logger &reg; is a registered Trademark and is not responsible for the consumption of your own creation.  Consuming raw or undercooked meats, poultry, seafood, shellfish, eggs or unpasteurized milk may increase your risk of foodborne illness. &copy;2017 Gail Izaguirre.  All rights reserved.</footer>

@@ -1,12 +1,12 @@
 # Burger Logger
 A food logging app that allows users to input the type of burger they'd like to eat and keep track of the burgers they have 'devoured'.  Use MySQL, Node, Express, Handlebars, ORM (yup, a total nightmare!)
 
-## Methology
+## Methodology
 * package.json
 * server.js
-  * Dependencies
-  * Basic server connection
-  * MySQL connection
+  * dependencies
+  * basic server connection
+  * mysql connection
 * database
   * schema
   * seed file
@@ -15,6 +15,7 @@ A food logging app that allows users to input the type of burger they'd like to 
   * orm.js
 * models
 * controllers
+  * burgers_controller.js --> creates all the functions that will do the routing for the app.
 * views
   * index.HTML
   * layouts --> main.handlebars
@@ -58,7 +59,7 @@ A food logging app that allows users to input the type of burger they'd like to 
     └── layouts
         └── main.handlebars
 ```
-### Screenshot Front-end WIP
+### Screenshot Front-end WIP:
 ![BurgerLogLogLog](./public/assets/css/img/BurgerLogLogLog.pdf)
 
 
