@@ -1,8 +1,25 @@
 <!-- set up the templates that Handlebars can render onto. -->
 
-<h1> Burger Logger! </h1>
+<h1> Burger Logger </h1>
 
-<h2>Burgers To Devour</h2>
+<h2>Add a Burger!</h2>
+<p> Tell us the kind of burger sando you'd love to eat.  Our chefs will put in on the menu. Before you know it, you can DEVOUR your tasty creation!!  Chomp-chomp-yum!</p>
+<form class="create-form">
+  <div class="form-group">
+    <label for="newBurger">Burger Description:</label>
+    <input type="text" id="newBurger" name="name">
+  </div>
+  <button type="submit">PREPARE IT!</button>
+</form>
+
+
+  <!-- <div class="form-group">
+    <label for="eaten">Devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> No longer available!<br>
+    <input type="radio" name="not devoured" value="0"> Available!!
+  </div> -->
+
+<h2>Burgers To Devour...</h2>
 
 <ul>
   {{#each burgers}}
@@ -12,27 +29,4 @@
   {{/each}}
 </ul>
 
-<h2>Burgers Devoured!</h2>
-
-<ul>
-  {{#each burger}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger!</h2>
-<form class="create-form">
-  <div class="form-group">
-    <label for="newBurger">Burger Description:</label>
-    <input type="text" id="newBurger" name="name">
-  </div>
-  <div class="form-group">
-    <label for="eaten">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> No longer available!<br>
-    <input type="radio" name="not devoured" value="0"> Available!!
-  </div>
-
-  <button type="submit">Add Another!</button>
-</form>
+<h2>Burgers Devoured:</h2>

@@ -1,9 +1,10 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
+
   $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
     var newdevoured = $(this).data("newdevoured");
-
+//class=change-devoured is in partials//burger-block.handlebars
     var newdevouredState = {
       devoured: newdevoured
     };
@@ -27,7 +28,7 @@ $(function() {
 
     var newBurger = {
       name: $("#newBurger").val().trim(),
-      devoured: $("[name=devoured]:checked").val().trim()
+      devoured: $("[name=devoured]:false").val().trim()
     };
 
     // Send the POST request.
@@ -43,18 +44,18 @@ $(function() {
     );
   });
 
-  $(".update-cat").on("click", function(event) {
-    var id = $(this).data("id");
-
-    // Send the DELETE request.
-    $.ajax("/api/burgers/" + id, {
-      type: "DELETE",
-    }).then(
-      function() {
-        console.log("deleted burger", id);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
+  // $(".update-burger").on("click", function(event) {
+  //   var id = $(this).data("id");
+  //
+  //   // Send the DELETE request.
+  //   $.ajax("/api/burgers/" + id, {
+  //     type: "POST",
+  //   }).then(
+  //     function() {
+  //       console.log("devoured burger", id);
+  //       // Reload the page to get the updated list
+  //       location.reload();
+  //     }
+  //   );
+  // });
 });
