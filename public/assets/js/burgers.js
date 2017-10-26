@@ -6,11 +6,11 @@ $(function() {
     var newdevoured = $(this).data("newdevoured");
 //class=change-devoured is in partials//burger-block.handlebars
     var newdevouredState = {
-      devoured: newdevoured
+      devoured: true
     };
 
     // Send the PUT request.
-    $.ajax("/burgers" + id, {
+    $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newdevouredState
     }).then(
@@ -32,7 +32,7 @@ $(function() {
     };
 
     // Send the POST request.
-    $.ajax("/burgers", {
+    $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
     }).then(
@@ -47,15 +47,5 @@ $(function() {
   // $(".update-burger").on("click", function(event) {
   //   var id = $(this).data("id");
   //
-  //   // Send the DELETE request.
-  //   $.ajax("/api/burgers/" + id, {
-  //     type: "POST",
-  //   }).then(
-  //     function() {
-  //       console.log("devoured burger", id);
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
+  //
 });
