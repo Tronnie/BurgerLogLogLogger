@@ -4,3 +4,9 @@ body {
 h1{
   color: red;
 }
+footer{
+  text-align: center;
+  font-size: 8px;
+  border-top: 1px solid #E0E0E0;
+  margin-top: 2em;
+}
