@@ -13,7 +13,7 @@
 </form>
 
 <div>
-  <img src="../public/assets/css/img/burger-chase.jpg" class="img-circle" alt="chase">
+  <img src="../public/assets/css/img/burger-chase.jpg" class="img-circle">
 </div>
 
 
@@ -22,17 +22,18 @@
 
 <ul>
   {{#each burgers}}
-  <li>
-    <p>
-      {{this.id}}.{{this.burger}}
+    <li>
+
+
+      {{this.burger}}
       {{#unless devoured}}
         {{> burgers/burger-block devoured=false}}
       {{/unless}}
 
-      <button data-burgerid="{{this.id}}" class="devour">DEVOUR IT</button>
-    </p>
-  </li>
-    {{/each}}
+        <!-- <button class="change-devour">DEVOUR IT</button> -->
+
+    </li>
+  {{/each}}
 </ul>
 
 <h2>Burgers Devoured:</h2>
