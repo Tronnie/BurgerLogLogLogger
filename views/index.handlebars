@@ -4,7 +4,7 @@
 
 <h2>Add a Burger!</h2>
 <p> Tell us the kind of burger sando you'd love to eat.  Our chefs will put in on the menu. Before you know it, you can DEVOUR your tasty creation!!  Chomp-chomp-yum!</p>
-<form class="create-form">
+<form id="add">
   <div class="form-group">
     <label for="newBurger">Burger Description:</label>
     <input type="text" id="newBurger" name="name">
@@ -38,7 +38,32 @@
 
 <h2>Burgers Devoured:</h2>
 <!-- pseudocoded: -->
+<form id="updateburger">
+{{this.burger}}
+</form>
 
+<script type="text/javascript">
+  $("#newBurger").on("submit", function(event) {
+      // Make sure to preventDefault on a submit event.
+      event.preventDefault();
+
+      var newBurger = {
+        burger: $("#add [name=burger]").val().trim()
+      };
+
+      // Send the POST request.
+      $.ajax("/burgers", {
+        type: "POST",
+        data: newBurger
+      }).then(
+        function() {
+          console.log("added new burger");
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
+</script>
 
 <br />
 <footer>

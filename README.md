@@ -60,7 +60,7 @@ A food logging app that allows users to input the type of burger they'd like to 
         └── main.handlebars
 ```
 ### Screenshot Front-end WIP:
-![BurgerLogLogLog](./public/assets/css/img/BurgerLogLogLog.pdf)
+![BurgerLogLogLog](./public/assets/css/img/BurgerLogLogLog.png)
 
 
 **Thank you for your Attetnion!**
